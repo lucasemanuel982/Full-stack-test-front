@@ -63,7 +63,7 @@ export default function DataTable({ users, loading = false, loadingType = 'idle'
             ) : safeUsers.length === 0 ? (
               <tr>
                 <td colSpan={4} className="h-[72px] px-4 py-2 text-center text-text-secondary text-sm">
-                  Nenhum dado encontrado
+                  No data found
                 </td>
               </tr>
             ) : (
