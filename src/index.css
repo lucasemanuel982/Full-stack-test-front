@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?display=swap&family=Manrope%3Awght%40400%3B500%3B700%3B800&family=Noto+Sans%3Awght%40400%3B500%3B700%3B900");
+
+body {
+  font-family: "Manrope", "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container queries para responsividade da tabela */
+@container (max-width: 120px) {
+  .table-column-id {
+    display: none;
+  }
+}
+
+@container (max-width: 240px) {
+  .table-column-name {
+    display: none;
+  }
+}
+
+@container (max-width: 360px) {
+  .table-column-email {
+    display: none;
+  }
+}
+
+@container (max-width: 480px) {
+  .table-column-phone {
+    display: none;
+  }
+}

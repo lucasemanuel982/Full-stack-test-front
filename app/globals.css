@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?display=swap&family=Manrope:wght@400;500;700;800&family=Noto+Sans:wght@400;500;700;900");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Manrope", "Noto Sans", sans-serif;
+  }
+}
+
+@layer components {
+  .table-responsive {
+    @apply overflow-x-auto rounded-xl border border-dark-table-border bg-dark-bg;
+  }
+
+  .table-header {
+    @apply bg-dark-table-bg;
+  }
+
+  .table-cell {
+    @apply border-t border-dark-table-border text-text-secondary text-sm font-normal leading-normal;
+  }
+
+  /* Garantir que a tabela seja exibida corretamente */
+  table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    min-width: 720px; /* Largura mínima para acomodar todas as colunas */
+  }
+
+  th,
+  td {
+    border: none;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    @apply flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary-purple text-white text-sm font-bold leading-normal tracking-[0.015em];
+  }
+
+  .btn-secondary {
+    @apply flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-dark-border text-white text-sm font-bold leading-normal tracking-[0.015em];
+  }
+
+  .pagination-btn {
+    @apply text-sm font-normal leading-normal flex size-10 items-center justify-center text-white rounded-full;
+  }
+
+  .pagination-btn-active {
+    @apply text-sm font-bold leading-normal tracking-[0.015em] flex size-10 items-center justify-center text-white rounded-full bg-dark-border;
+  }
+}
+
+/* Container queries for responsive table */
+@container (max-width: 120px) {
+  .table-column-id {
+    display: none;
+  }
+}
+
+@container (max-width: 240px) {
+  .table-column-name {
+    display: none;
+  }
+}
+
+@container (max-width: 360px) {
+  .table-column-email {
+    display: none;
+  }
+}
+
+@container (max-width: 480px) {
+  .table-column-phone {
+    display: none;
+  }
+}
