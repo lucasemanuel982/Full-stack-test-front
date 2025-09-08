@@ -15,10 +15,10 @@ export default function DataTable({ users, loading = false, loadingType = 'idle'
   
   
   const columns = [
-    { key: 'id' as keyof ApiUser, label: 'ID', width: 'w-[80px]', className: 'table-column-id' },
-    { key: 'nome' as keyof ApiUser, label: 'Nome', width: 'w-[200px]', className: 'table-column-name' },
-    { key: 'email' as keyof ApiUser, label: 'Email', width: 'w-[250px]', className: 'table-column-email' },
-    { key: 'phone' as keyof ApiUser, label: 'Phone', width: 'w-[150px]', className: 'table-column-phone' },
+    { key: 'id' as keyof ApiUser, label: 'ID', width: 'w-[60px] md:w-[80px]', className: 'table-column-id' },
+    { key: 'nome' as keyof ApiUser, label: 'Nome', width: 'w-[120px] md:w-[200px]', className: 'table-column-name' },
+    { key: 'email' as keyof ApiUser, label: 'Email', width: 'w-[150px] md:w-[250px]', className: 'table-column-email' },
+    { key: 'phone' as keyof ApiUser, label: 'Phone', width: 'w-[100px] md:w-[150px]', className: 'table-column-phone' },
   ];
 
   return (

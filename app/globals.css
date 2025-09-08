@@ -26,7 +26,126 @@
   table {
     border-collapse: collapse;
     table-layout: fixed;
-    min-width: 720px; /* Largura mínima para acomodar todas as colunas */
+    width: 100%;
+    min-width: 320px; /* Largura mínima reduzida para mobile */
+  }
+
+  /* Responsividade melhorada */
+  @media (max-width: 1024px) {
+    table {
+      min-width: 100%;
+    }
+
+    th,
+    td {
+      padding: 0.75rem 0.5rem;
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .layout-container {
+      padding: 0 1rem;
+    }
+
+    .layout-content-container {
+      padding: 0 1rem;
+    }
+
+    table {
+      min-width: 100%;
+      font-size: 0.875rem;
+    }
+
+    th,
+    td {
+      padding: 0.5rem 0.25rem;
+      font-size: 0.8rem;
+    }
+
+    /* Ajustar larguras das colunas em tablet */
+    .table-column-id {
+      width: 60px !important;
+    }
+
+    .table-column-name {
+      width: 120px !important;
+    }
+
+    .table-column-email {
+      width: 150px !important;
+    }
+
+    .table-column-phone {
+      width: 100px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .layout-container {
+      padding: 0 0.5rem;
+    }
+
+    .layout-content-container {
+      padding: 0 0.5rem;
+    }
+
+    table {
+      font-size: 0.75rem;
+      min-width: 100%;
+    }
+
+    th,
+    td {
+      padding: 0.375rem 0.125rem;
+      font-size: 0.75rem;
+    }
+
+    /* Ajustar larguras das colunas em mobile */
+    .table-column-id {
+      width: 40px !important;
+    }
+
+    .table-column-name {
+      width: 80px !important;
+    }
+
+    .table-column-email {
+      width: 100px !important;
+    }
+
+    .table-column-phone {
+      width: 80px !important;
+    }
+  }
+
+  @media (max-width: 360px) {
+    table {
+      font-size: 0.7rem;
+    }
+
+    th,
+    td {
+      padding: 0.25rem 0.0625rem;
+      font-size: 0.7rem;
+    }
+
+    /* Ajustar larguras das colunas em mobile pequeno */
+    .table-column-id {
+      width: 30px !important;
+    }
+
+    .table-column-name {
+      width: 60px !important;
+    }
+
+    .table-column-email {
+      width: 80px !important;
+    }
+
+    .table-column-phone {
+      width: 60px !important;
+    }
   }
 
   th,
@@ -39,11 +158,11 @@
   }
 
   .btn-primary {
-    @apply flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary-purple text-white text-sm font-bold leading-normal tracking-[0.015em];
+    @apply flex min-w-[70px] md:min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 md:h-10 px-2 md:px-4 bg-primary-purple text-white text-xs md:text-sm font-bold leading-normal tracking-[0.015em];
   }
 
   .btn-secondary {
-    @apply flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-dark-border text-white text-sm font-bold leading-normal tracking-[0.015em];
+    @apply flex min-w-[70px] md:min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-8 md:h-10 px-2 md:px-4 bg-dark-border text-white text-xs md:text-sm font-bold leading-normal tracking-[0.015em];
   }
 
   .pagination-btn {
